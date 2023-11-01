@@ -15,14 +15,15 @@ using System.Windows.Shapes;
 namespace PR30
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Autorization.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Autorization : Window
     {
-        public MainWindow()
+        public Autorization()
         {
             InitializeComponent();
         }
+
         private void Hide_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
@@ -32,14 +33,21 @@ namespace PR30
             this.Close();
         }
 
-        private void ToAddEdit_Click(object sender, RoutedEventArgs e)
+        private void ToReg_Click(object sender, RoutedEventArgs e)
         {
-            var ToAddEdit = new AddEdit();
-            ToAddEdit.Show();
+            var ToReg = new Registration();
+            ToReg.Show(); 
             this.Close();
         }
 
-        private void ToSearch_click(object sender, RoutedEventArgs e)
+        private void ToMain_Click(object sender, RoutedEventArgs e)
+        {
+            var ToMain = new MainWindow();
+            ToMain.Show();
+            this.Close();
+        }
+
+        private void ToMainGuest_Click(object sender, RoutedEventArgs e)
         {
             var ToSearch = new Search();
             ToSearch.Show();

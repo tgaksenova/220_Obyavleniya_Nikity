@@ -15,34 +15,21 @@ using System.Windows.Shapes;
 namespace PR30
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Search.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Search : Window
     {
-        public MainWindow()
+        public Search()
         {
             InitializeComponent();
         }
+
         private void Hide_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
         private void Close_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
-        }
-
-        private void ToAddEdit_Click(object sender, RoutedEventArgs e)
-        {
-            var ToAddEdit = new AddEdit();
-            ToAddEdit.Show();
-            this.Close();
-        }
-
-        private void ToSearch_click(object sender, RoutedEventArgs e)
-        {
-            var ToSearch = new Search();
-            ToSearch.Show();
             this.Close();
         }
     }

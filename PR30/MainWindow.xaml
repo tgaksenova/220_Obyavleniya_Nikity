@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PR30"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="500" Width="500">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#FF0000CC"/>
+        <Grid Grid.Row="2" Background="#FF0000CC"/>
+        <Button Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Top" Background="#FF99FFFF" Foreground="Black" 
+            FontSize="18" BorderThickness="0" Click="Close_Click" Cursor="Hand" Content="X"/>
+        <Button Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0 25 0" Background="#FFDEDEDE" 
+            Foreground="Black" FontSize="18" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            Click="Hide_Click" Cursor="Hand" Content="-"/>
+        <Button Grid.Row="0" Height="30" Width="100" FontSize="16" Background="#FF99FFFF" Cursor="Hand" Foreground="Black" BorderThickness="0" FontFamily="Comic Sans MS" Content="Просмотр" Click="ToSearch_click"/>
+        <DataGrid Grid.Row="1"/>
+        <Button Grid.Row="2" Height="50" Width="170" FontSize="16" Background="#FF99FFFF" HorizontalAlignment="Left" Margin="30 0 0 0" Cursor="Hand" Foreground="Black" BorderThickness="0" FontFamily="Comic Sans MS" Content="Добавить" Click="ToAddEdit_Click"/>
+        <Button Grid.Row="2" Height="50" Width="170" FontSize="16" Background="#FF99FFFF" HorizontalAlignment="Right" Margin="0 0 30 0" Cursor="Hand" Foreground="Black" BorderThickness="0" FontFamily="Comic Sans MS" Content="Удалить"/>
     </Grid>
 </Window>

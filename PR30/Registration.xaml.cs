@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace PR30
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Registration.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Registration : Window
     {
-        public MainWindow()
+        public Registration()
         {
             InitializeComponent();
         }
@@ -32,17 +32,10 @@ namespace PR30
             this.Close();
         }
 
-        private void ToAddEdit_Click(object sender, RoutedEventArgs e)
+        private void ToAuth_Click(object sender, RoutedEventArgs e)
         {
-            var ToAddEdit = new AddEdit();
-            ToAddEdit.Show();
-            this.Close();
-        }
-
-        private void ToSearch_click(object sender, RoutedEventArgs e)
-        {
-            var ToSearch = new Search();
-            ToSearch.Show();
+            var ToAuth = new Autorization();
+            ToAuth.Show();
             this.Close();
         }
     }

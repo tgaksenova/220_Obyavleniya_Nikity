@@ -15,14 +15,15 @@ using System.Windows.Shapes;
 namespace PR30
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AddEdit.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddEdit : Window
     {
-        public MainWindow()
+        public AddEdit()
         {
             InitializeComponent();
         }
+
         private void Hide_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
@@ -32,17 +33,10 @@ namespace PR30
             this.Close();
         }
 
-        private void ToAddEdit_Click(object sender, RoutedEventArgs e)
+        private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var ToAddEdit = new AddEdit();
-            ToAddEdit.Show();
-            this.Close();
-        }
-
-        private void ToSearch_click(object sender, RoutedEventArgs e)
-        {
-            var ToSearch = new Search();
-            ToSearch.Show();
+            var ToMain = new MainWindow();
+            ToMain.Show();
             this.Close();
         }
     }

@@ -1,0 +1,36 @@
+﻿<Window x:Class="PR30.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR30"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Title="Registration" Height="450" Width="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Top" Background="#FF99FFFF" Foreground="Black" 
+            FontSize="18" BorderThickness="0" Click="Close_Click" Cursor="Hand">X</Button>
+        <Button Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0 25 0" Background="#FFDEDEDE" 
+            Foreground="Black" FontSize="18" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            Click="Hide_Click" Cursor="Hand">-</Button>
+        <Label FontSize="30" Foreground="#FF0000CC" Height="50" Width="190" FontFamily="Comic Sans MS">Регистрация</Label>
+        <Label Grid.Row="1" Height="30" Width="140" FontSize="14" VerticalAlignment="Top" Foreground="#FF0000CC" FontFamily="Comic Sans MS">Введите ваш логин</Label>
+        <TextBox Grid.Row="1" Height="40" Width="270" VerticalContentAlignment="Center" FontSize="24" Foreground="#FF0000CC" BorderBrush="#FF0000CC"></TextBox>
+        <Label Grid.Row="2" Height="30" Width="120" FontSize="14" VerticalAlignment="Top" Foreground="#FF0000CC" FontFamily="Comic Sans MS">Введите пароль</Label>
+        <TextBox Grid.Row="2" Height="40" Width="270" VerticalContentAlignment="Center" FontSize="24" Foreground="#FF0000CC" BorderBrush="#FF0000CC"></TextBox>
+        <Label Grid.Row="3" Height="30" Width="225" FontSize="14" VerticalAlignment="Top" Foreground="#FF0000CC" FontFamily="Comic Sans MS">Введите подтверждение пароля</Label>
+        <TextBox Grid.Row="3" Height="40" Width="270" VerticalContentAlignment="Center" FontSize="24" Foreground="#FF0000CC" BorderBrush="#FF0000CC"></TextBox>
+        <Button Grid.Row="4" Height="50" Width="170" FontSize="16" Background="#FF99FFFF" Cursor="Hand" Foreground="Black" BorderThickness="0" FontFamily="Comic Sans MS">Зарегистрироваться</Button>
+        <Button Grid.Row="4" Width="100" Height="20" Background="Transparent" VerticalAlignment="Bottom" Foreground="#FF0000CC" 
+            BorderThickness="0" Cursor="Hand" FontFamily="Comis Sans MS" Click="ToAuth_Click">Авторизоваться?</Button>
+    </Grid>
+</Window>
