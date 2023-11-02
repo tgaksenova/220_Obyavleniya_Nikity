@@ -43,7 +43,7 @@
         <Label Grid.Row="7" FontFamily="Comic Sans MS" HorizontalAlignment="Center" FontSize="22" Height="50" Foreground="#FF0000CC">Способ оплаты</Label>
         <Label Grid.Row="8" FontFamily="Comic Sans MS" HorizontalAlignment="Center" FontSize="22" Height="50" Foreground="#FF0000CC">Способ доставки</Label>
         <TextBox Grid.Row="1" Grid.Column="1" Width="190" Text="{Binding PublicationDate}" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
-        <ComboBox Grid.Row="2" x:Name="ComboCat" SelectedItem="{Binding Categories}" DisplayMemberPath="Category" Grid.Column="1" Width="190" Height="35" Background="#FF0000CC" Foreground="Black" VerticalContentAlignment="Center" FontSize="24"></ComboBox>
+        <ComboBox Grid.Row="2" x:Name="ComboCat" SelectedItem="{Binding Categories}" DisplayMemberPath="Category" Grid.Column="1" Width="190" Height="35" Foreground="Black" VerticalContentAlignment="Center" FontSize="24" BorderBrush="#FFECECEC" Background="#FF0000CC"/>
         <TextBox Grid.Row="3" Grid.Column="1" Width="190" Text="{Binding PublicationName}" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
         <TextBox Grid.Row="4" Grid.Column="1" Width="190" Text="{Binding ProductCost}" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
         <TextBox Grid.Row="5" Grid.Column="1" Width="190" Text="{Binding ProductCondition}" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
