@@ -9,6 +9,7 @@ namespace PR30
     internal class GlobalEntities
     {
         public static string LoginE;
+        public static int id;
         public static string PasswordE;
         public static string PhoneNumberE;
         public static string Email;

@@ -14,6 +14,7 @@ namespace PR30
     
     public partial class Announcement
     {
+        public int AnnouncementId { get; set; }
         public Nullable<System.DateTime> PublicationDate { get; set; }
         public int SellerId { get; set; }
         public int CategoryId { get; set; }
@@ -23,8 +24,5 @@ namespace PR30
         public string Description { get; set; }
         public string PaymentMethod { get; set; }
         public string DeliveryMethod { get; set; }
-    
-        public virtual Categories Categories { get; set; }
-        public virtual Sellers Sellers { get; set; }
     }
 }

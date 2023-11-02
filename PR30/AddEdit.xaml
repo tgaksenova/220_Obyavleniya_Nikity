@@ -35,21 +35,21 @@
             Cursor="Hand" Click="Hide_Click">-</Button>
         <Button Grid.Row="0" Grid.Column="1" Height="30" Width="100" FontSize="16" Background="#FF99FFFF" Cursor="Hand" Foreground="Black" BorderThickness="0" FontFamily="Comic Sans MS" Content="Назад" Click="Back_Click"/>
         <Label Grid.Row="1" FontFamily="Comic Sans MS" HorizontalAlignment="Center" FontSize="22" Height="50" Foreground="#FF0000CC">Дата</Label>
-        <Label Grid.Row="2" FontFamily="Comic Sans MS" HorizontalAlignment="Center" FontSize="22" Height="50" Foreground="#FF0000CC">Id Категории</Label>
+        <Label Grid.Row="2" FontFamily="Comic Sans MS" HorizontalAlignment="Center" FontSize="22" Height="50" Foreground="#FF0000CC">Категория</Label>
         <Label Grid.Row="3" FontFamily="Comic Sans MS" HorizontalAlignment="Center" FontSize="22" Height="50" Foreground="#FF0000CC">Название публикации</Label>
         <Label Grid.Row="4" FontFamily="Comic Sans MS" HorizontalAlignment="Center" FontSize="22" Height="50" Foreground="#FF0000CC">Стоимость</Label>
         <Label Grid.Row="5" FontFamily="Comic Sans MS" HorizontalAlignment="Center" FontSize="22" Height="50" Foreground="#FF0000CC">Состояние товара</Label>
         <Label Grid.Row="6" FontFamily="Comic Sans MS" HorizontalAlignment="Center" FontSize="22" Height="50" Foreground="#FF0000CC">Описание</Label>
         <Label Grid.Row="7" FontFamily="Comic Sans MS" HorizontalAlignment="Center" FontSize="22" Height="50" Foreground="#FF0000CC">Способ оплаты</Label>
         <Label Grid.Row="8" FontFamily="Comic Sans MS" HorizontalAlignment="Center" FontSize="22" Height="50" Foreground="#FF0000CC">Способ доставки</Label>
-        <TextBox Grid.Row="1" Grid.Column="1" Width="190" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
-        <TextBox Grid.Row="2" Grid.Column="1" Width="190" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
-        <TextBox Grid.Row="3" Grid.Column="1" Width="190" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
-        <TextBox Grid.Row="4" Grid.Column="1" Width="190" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
-        <TextBox Grid.Row="5" Grid.Column="1" Width="190" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
-        <TextBox Grid.Row="6" Grid.Column="1" Width="190" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
-        <TextBox Grid.Row="7" Grid.Column="1" Width="190" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
-        <TextBox Grid.Row="8" Grid.Column="1" Width="190" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
+        <TextBox Grid.Row="1" Grid.Column="1" Width="190" Text="{Binding PublicationDate}" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
+        <ComboBox Grid.Row="2" x:Name="ComboCat" SelectedItem="{Binding Categories}" DisplayMemberPath="Category" Grid.Column="1" Width="190" Height="35" Background="#FF0000CC" Foreground="Black" VerticalContentAlignment="Center" FontSize="24"></ComboBox>
+        <TextBox Grid.Row="3" Grid.Column="1" Width="190" Text="{Binding PublicationName}" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
+        <TextBox Grid.Row="4" Grid.Column="1" Width="190" Text="{Binding ProductCost}" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
+        <TextBox Grid.Row="5" Grid.Column="1" Width="190" Text="{Binding ProductCondition}" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
+        <TextBox Grid.Row="6" Grid.Column="1" Width="190" Text="{Binding Description}" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
+        <TextBox Grid.Row="7" Grid.Column="1" Width="190" Text="{Binding PaymentMethod}" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
+        <TextBox Grid.Row="8" Grid.Column="1" Width="190" Text="{Binding DeliveryMethod}" Height="35" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24"></TextBox>
         <Button Grid.Row="9" Grid.Column="1" Height="40" Width="150" FontSize="20" Background="#FF99FFFF" Cursor="Hand" Foreground="Black" BorderThickness="0" FontFamily="Comic Sans MS" Content="Сохранить" Click="Button_Click"/>
     </Grid>
 </Window>

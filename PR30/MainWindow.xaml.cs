@@ -35,7 +35,7 @@ namespace PR30
 
         private void ToAddEdit_Click(object sender, RoutedEventArgs e)
         {
-            var ToAddEdit = new AddEdit();
+            var ToAddEdit = new AddEdit(null);
             ToAddEdit.Show();
             this.Close();
         }

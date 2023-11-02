@@ -15,11 +15,11 @@ namespace PR30
     
     public partial class Pr_29Entities : DbContext
     {
-        private static Pr_29Entities _context;
         public Pr_29Entities()
             : base("name=Pr_29Entities")
         {
         }
+        private static Pr_29Entities _context;
         public static Pr_29Entities GetContext()
         {
             if (_context == null)
@@ -34,8 +34,8 @@ namespace PR30
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Announcement> Announcement { get; set; }
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<Sellers> Sellers { get; set; }
-        public virtual DbSet<Announcement> Announcement { get; set; }
     }
 }

@@ -56,7 +56,7 @@ namespace PR30
                 if (CurrentUser != null)
                 {
                     GlobalEntities.LoginE = CurrentUser.Login;
-                    GlobalEntities.Email = CurrentUser.Email;
+                    GlobalEntities.id = CurrentUser.SellerId;
                     GlobalEntities.PhoneNumberE = CurrentUser.PhoneNumber;
                     GlobalEntities.PasswordE = CurrentUser.Password;
                     GlobalEntities.UnHashPassword = PasswordBox.Password.ToString();

@@ -14,12 +14,6 @@ namespace PR30
     
     public partial class Sellers
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Sellers()
-        {
-            this.Announcement = new HashSet<Announcement>();
-        }
-    
         public int SellerId { get; set; }
         public string Region { get; set; }
         public string FIO { get; set; }
@@ -28,8 +22,5 @@ namespace PR30
         public string Address { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Announcement> Announcement { get; set; }
     }
 }

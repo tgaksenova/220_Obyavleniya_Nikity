@@ -22,6 +22,7 @@ namespace PR30
         public Search()
         {
             InitializeComponent();
+            Annoc.ItemsSource = Pr_29Entities.GetContext().Announcement.ToList();
         }
 
         private void Hide_Click(object sender, RoutedEventArgs e)
@@ -31,6 +32,23 @@ namespace PR30
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                //ListUser.ItemsSource = AppData.db.Announcement.Where(u => u.PublicationName == TBoxSearch.Text || u.PublicationName.Contains(TBoxSearch.Text)).ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка!" + ex.ToString());
+            }
+        }
+
+        private void ListUser_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
