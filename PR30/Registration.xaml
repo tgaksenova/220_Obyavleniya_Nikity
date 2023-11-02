@@ -24,12 +24,12 @@
             Click="Hide_Click" Cursor="Hand">-</Button>
         <Label FontSize="30" Foreground="#FF0000CC" Height="50" Width="190" FontFamily="Comic Sans MS">Регистрация</Label>
         <Label Grid.Row="1" Height="30" Width="140" FontSize="14" VerticalAlignment="Top" Foreground="#FF0000CC" FontFamily="Comic Sans MS">Введите ваш логин</Label>
-        <TextBox Grid.Row="1" Height="40" Width="270" VerticalContentAlignment="Center" FontSize="24" Foreground="#FF0000CC" BorderBrush="#FF0000CC"></TextBox>
+        <TextBox Grid.Row="1" Name="Login" Height="40" Width="270" VerticalContentAlignment="Center" FontSize="24" Foreground="#FF0000CC" BorderBrush="#FF0000CC"></TextBox>
         <Label Grid.Row="2" Height="30" Width="120" FontSize="14" VerticalAlignment="Top" Foreground="#FF0000CC" FontFamily="Comic Sans MS">Введите пароль</Label>
-        <TextBox Grid.Row="2" Height="40" Width="270" VerticalContentAlignment="Center" FontSize="24" Foreground="#FF0000CC" BorderBrush="#FF0000CC"></TextBox>
+        <TextBox Grid.Row="2" Name="password" Height="40" Width="270" VerticalContentAlignment="Center" FontSize="24" Foreground="#FF0000CC" BorderBrush="#FF0000CC"></TextBox>
         <Label Grid.Row="3" Height="30" Width="225" FontSize="14" VerticalAlignment="Top" Foreground="#FF0000CC" FontFamily="Comic Sans MS">Введите подтверждение пароля</Label>
-        <TextBox Grid.Row="3" Height="40" Width="270" VerticalContentAlignment="Center" FontSize="24" Foreground="#FF0000CC" BorderBrush="#FF0000CC"></TextBox>
-        <Button Grid.Row="4" Height="50" Width="170" FontSize="16" Background="#FF99FFFF" Cursor="Hand" Foreground="Black" BorderThickness="0" FontFamily="Comic Sans MS">Зарегистрироваться</Button>
+        <TextBox Grid.Row="3" Name="confPass" Height="40" Width="270" VerticalContentAlignment="Center" FontSize="24" Foreground="#FF0000CC" BorderBrush="#FF0000CC"></TextBox>
+        <Button Grid.Row="4" Height="50" Width="170" FontSize="16" Background="#FF99FFFF" Cursor="Hand" Foreground="Black" BorderThickness="0" FontFamily="Comic Sans MS" Click="Button_Click">Зарегистрироваться</Button>
         <Button Grid.Row="4" Width="100" Height="20" Background="Transparent" VerticalAlignment="Bottom" Foreground="#FF0000CC" 
             BorderThickness="0" Cursor="Hand" FontFamily="Comis Sans MS" Click="ToAuth_Click">Авторизоваться?</Button>
     </Grid>

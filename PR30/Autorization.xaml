@@ -23,9 +23,9 @@
         Click="Hide_Click" Cursor="Hand">-</Button>
         <Label FontSize="30" Foreground="#FF0000CC" Height="50" Width="200" FontFamily="Comic Sans MS">Авторизация</Label>
         <Label Grid.Row="1" Height="30" Width="140" FontSize="14" VerticalAlignment="Top" Foreground="#FF0000CC" FontFamily="Comic Sans MS">Введите ваш логин</Label>
-        <TextBox Grid.Row="1" Height="50" Width="270" VerticalContentAlignment="Center" FontSize="24" Foreground="#FF0000CC" BorderBrush="#FF0000CC"></TextBox>
+        <TextBox Grid.Row="1" Name="Login" Height="50" Width="270" VerticalContentAlignment="Center" FontSize="24" Foreground="#FF0000CC" BorderBrush="#FF0000CC"></TextBox>
         <Label Grid.Row="2" Height="30" Width="120" FontSize="14" VerticalAlignment="Top" Foreground="#FF0000CC" FontFamily="Comic Sans MS">Введите пароль</Label>
-        <TextBox Grid.Row="2" Height="50" Width="270" VerticalContentAlignment="Center" FontSize="24" Foreground="#FF0000CC" BorderBrush="#FF0000CC"></TextBox>
+        <PasswordBox Grid.Row="2" x:Name="PasswordBox" Height="50" Width="270" VerticalContentAlignment="Center" FontSize="24" Foreground="#FF0000CC" BorderBrush="#FF0000CC"></PasswordBox>
         <Button Grid.Row="3" Width="100" Height="20" Background="Transparent" VerticalAlignment="Bottom" Foreground="#FF0000CC" FontSize="12"
         BorderThickness="0" Cursor="Hand" FontFamily="Comis Sans MS" Click="ToMainGuest_Click" Margin="125,0,125,92">Войти как гость</Button>
         <Button Grid.Row="3" Height="50" Width="170" FontSize="24" Background="#FF99FFFF" Cursor="Hand" Foreground="Black" 
