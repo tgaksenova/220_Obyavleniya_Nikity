@@ -37,6 +37,6 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button Grid.Row="2" Height="50" Width="170" FontSize="16" Background="#FF99FFFF" HorizontalAlignment="Left" Margin="30 0 0 0" Cursor="Hand" Foreground="Black" BorderThickness="0" FontFamily="Comic Sans MS" Content="Добавить" Click="ToAddEdit_Click"/>
-        <Button Grid.Row="2" Height="50" Width="170" FontSize="16" Background="#FF99FFFF" HorizontalAlignment="Right" Margin="0 0 30 0" Cursor="Hand" Foreground="Black" BorderThickness="0" FontFamily="Comic Sans MS" Content="Удалить"/>
+        <Button Grid.Row="2" Height="50" Width="170" FontSize="16" Background="#FF99FFFF" HorizontalAlignment="Right" Margin="0 0 30 0" Cursor="Hand" Foreground="Black" BorderThickness="0" FontFamily="Comic Sans MS" Content="Удалить" Click="Button_Click"/>
     </Grid>
 </Window>

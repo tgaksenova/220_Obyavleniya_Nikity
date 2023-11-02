@@ -22,7 +22,7 @@ namespace PR30
         public Search()
         {
             InitializeComponent();
-            Annoc.ItemsSource = Pr_29Entities.GetContext().Announcement.ToList();
+            ListUser.ItemsSource = Pr_29Entities.GetContext().Announcement.ToList();
         }
 
         private void Hide_Click(object sender, RoutedEventArgs e)
@@ -46,9 +46,5 @@ namespace PR30
             }
         }
 
-        private void ListUser_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }

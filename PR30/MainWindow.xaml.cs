@@ -54,5 +54,10 @@ namespace PR30
                 Annoc.ItemSource = Pr_29Entities.GetContext().Announcement.ToList();
             }*/
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
