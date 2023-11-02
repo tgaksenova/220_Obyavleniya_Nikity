@@ -39,5 +39,10 @@ namespace PR30
             ToMain.Show();
             this.Close();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

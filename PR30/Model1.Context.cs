@@ -15,11 +15,20 @@ namespace PR30
     
     public partial class Pr_29Entities : DbContext
     {
+        private static Pr_29Entities _context;
         public Pr_29Entities()
             : base("name=Pr_29Entities")
         {
         }
-    
+        public static Pr_29Entities GetContext()
+        {
+            if (_context == null)
+            {
+                _context = new Pr_29Entities();
+            }
+            return _context;
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

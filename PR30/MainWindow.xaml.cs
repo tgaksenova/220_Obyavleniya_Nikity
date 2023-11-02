@@ -22,6 +22,7 @@ namespace PR30
         public MainWindow()
         {
             InitializeComponent();
+            Annoc.ItemsSource = Pr_29Entities.GetContext().Announcement.ToList();
         }
         private void Hide_Click(object sender, RoutedEventArgs e)
         {
@@ -44,6 +45,14 @@ namespace PR30
             var ToSearch = new Search();
             ToSearch.Show();
             this.Close();
+        }
+        private void Window_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            /*if (Visibility == Visibility.Visible)
+            {
+                Pr_29Entities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                Annoc.ItemSource = Pr_29Entities.GetContext().Announcement.ToList();
+            }*/
         }
     }
 }

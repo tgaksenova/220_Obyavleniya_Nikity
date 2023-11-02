@@ -8,7 +8,7 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Title="MainWindow" Height="500" Width="500">
+        Title="MainWindow" Height="500" Width="500" IsVisibleChanged="Window_IsVisibleChanged">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -23,7 +23,19 @@
             Foreground="Black" FontSize="18" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
             Click="Hide_Click" Cursor="Hand" Content="-"/>
         <Button Grid.Row="0" Height="30" Width="100" FontSize="16" Background="#FF99FFFF" Cursor="Hand" Foreground="Black" BorderThickness="0" FontFamily="Comic Sans MS" Content="Просмотр" Click="ToSearch_click"/>
-        <DataGrid Grid.Row="1"/>
+        <DataGrid Grid.Row="1" x:Name="Annoc" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Дата" Binding="{Binding PublicationDate}" Width="auto"></DataGridTextColumn>
+                <DataGridTextColumn Header="Id продавца" Binding="{Binding SellerId}" Width="auto"></DataGridTextColumn>
+                <DataGridTextColumn Header="Id категории" Binding="{Binding CategoryId}" Width="auto"></DataGridTextColumn>
+                <DataGridTextColumn Header="Название публикации" Binding="{Binding PublicationName}" Width="auto"></DataGridTextColumn>
+                <DataGridTextColumn Header="Стоимость" Binding="{Binding ProductCost}" Width="auto"></DataGridTextColumn>
+                <DataGridTextColumn Header="Состояние товара" Binding="{Binding ProductCondition}" Width="auto"></DataGridTextColumn>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="auto"></DataGridTextColumn>
+                <DataGridTextColumn Header="Способ оплаты" Binding="{Binding PaymentMethod}" Width="auto"></DataGridTextColumn>
+                <DataGridTextColumn Header="Способ доставки" Binding="{Binding DeliveryMethod}" Width="auto"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
         <Button Grid.Row="2" Height="50" Width="170" FontSize="16" Background="#FF99FFFF" HorizontalAlignment="Left" Margin="30 0 0 0" Cursor="Hand" Foreground="Black" BorderThickness="0" FontFamily="Comic Sans MS" Content="Добавить" Click="ToAddEdit_Click"/>
         <Button Grid.Row="2" Height="50" Width="170" FontSize="16" Background="#FF99FFFF" HorizontalAlignment="Right" Margin="0 0 30 0" Cursor="Hand" Foreground="Black" BorderThickness="0" FontFamily="Comic Sans MS" Content="Удалить"/>
     </Grid>
