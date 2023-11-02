@@ -8,8 +8,8 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Title="Search" Height="500" Width="500">
-    <ListView Background="Transparent" BorderBrush="Transparent" Name="ListUser" Grid.Row="1" Cursor="" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" SelectionChanged="ListUser_SelectionChanged" Margin="0,134,0,0">>
+        Title="Search" Height="500" Width="800">
+    <ListView Background="Transparent" BorderBrush="Transparent" Name="ListUser" Cursor="" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" SelectionChanged="ListUser_SelectionChanged">>
         <ListView.ItemTemplate>
             <DataTemplate>
                 <Grid>
@@ -17,15 +17,10 @@
                         <RowDefinition Height="200"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Height="30" Orientation="Horizontal">
+                    <StackPanel Grid.Row="0" Height="30" Orientation="Horizontal">
                         <TextBlock Text="Введите название для поиска:" Width="250" TextAlignment="Center" FontFamily="Arial" Foreground="#FF0000CC" FontSize="16"></TextBlock>
-                        <TextBox Background="#FF0000CC" Name="TBoxSearch" Foreground="White" Width="250" TextAlignment="Left" FontSize="18" FontFamily="Arial" Cursor="" TextChanged="TextBox_TextChanged"></TextBox>
+                        <TextBox Background="#FF0000CC" Name="TBoxSearch" Foreground="White" Width="550" TextAlignment="Left" FontSize="18" FontFamily="Arial" Cursor="" TextChanged="TextBox_TextChanged"></TextBox>
                     </StackPanel>
-                    <Button Height="25" Grid.Row="0" Width="25" HorizontalAlignment="Right" VerticalAlignment="Top" Background="#FF99FFFF" Foreground="Black" 
-            FontSize="18" BorderThickness="0" Click="Close_Click" Cursor="Hand" Content="X"/>
-                    <Button Height="25" Width="25" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0 25 0" Background="#FFDEDEDE" 
-            Foreground="Black" FontSize="18" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-            Click="Hide_Click" Cursor="Hand" Content="-"/>
                     <DataGrid Grid.Row="1" x:Name="Annoc" AutoGenerateColumns="False" IsReadOnly="True">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Дата" Binding="{Binding PublicationDate}" Width="auto"></DataGridTextColumn>
@@ -39,6 +34,11 @@
                             <DataGridTextColumn Header="Способ доставки" Binding="{Binding DeliveryMethod}" Width="auto"></DataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
+                    <Button Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0 25 0" Background="#FFDEDEDE" 
+            Foreground="Black" FontSize="18" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            Click="Hide_Click" Cursor="Hand" Content="-"/>
+                    <Button Height="25" Width="25" HorizontalAlignment="Right" VerticalAlignment="Top" Background="#FF99FFFF" Foreground="Black" 
+            FontSize="18" BorderThickness="0" Click="Close_Click" Cursor="Hand" Content="X"/>
                 </Grid>
             </DataTemplate>
         </ListView.ItemTemplate>
