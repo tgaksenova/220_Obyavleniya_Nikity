@@ -57,7 +57,21 @@ namespace PR30
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            var filmsForRemoving = Annoc.SelectedItems.Cast<Announcement>().ToList();
+            if (MessageBox.Show($"Вы точно хотите удалить: {filmsForRemoving.Count()} элементов?", "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    Pr_29Entities.GetContext().Announcement.RemoveRange(filmsForRemoving);
+                    Pr_29Entities.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены!");
+                    Annoc.ItemsSource = Pr_29Entities.GetContext().Announcement.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
     }
 }

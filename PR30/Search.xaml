@@ -20,7 +20,7 @@
             Foreground="Black" FontSize="18" BorderThickness="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
             Click="Hide_Click" Cursor="Hand">-</Button>
         <Label Grid.Row="0" FontFamily="Comic Sans MS" FontSize="22" Height="40" VerticalAlignment="Bottom" Foreground="#FF0000CC" Margin="0 0 0 10">Введите название для поиска:</Label>
-        <TextBox Grid.Row="0" Width="470" Text="{Binding PublicationDate}" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24" Margin="0 0 0 10"></TextBox>
+        <TextBox Grid.Row="0" Width="470" Name="TBoxSearch" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FF0000CC" Foreground="#fff" VerticalContentAlignment="Center" FontSize="24" Margin="0 0 0 10" TextChanged="TBoxSearch_TextChanged" ></TextBox>
         <ListView Background="Transparent" BorderBrush="Transparent" Name="ListUser" Grid.Row="1" Cursor="" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -29,9 +29,8 @@
                             <RowDefinition Height="60"></RowDefinition>
                             <RowDefinition Height="350"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" Foreground="White" TextAlignment="Center" HorizontalAlignment="Center" Width="150" Margin="0,25,0,0" VerticalAlignment="Center" Text="{Binding Name}" FontFamily="Arial" FontSize="24" ></TextBlock>
-                        <TextBlock Grid.Row="0" Foreground="White" TextAlignment="Center" HorizontalAlignment="Center" Width="150" Margin="0,0,0,25" VerticalAlignment="Center" Text="{Binding Surname}" FontFamily="Arial" FontSize="24" ></TextBlock>
-                        <Image Stretch="UniformToFill" Width="350" Height="350" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding Photo}"></Image>
+                        <TextBlock Grid.Row="0" Foreground="Black" TextAlignment="Center" HorizontalAlignment="Center" Width="150" Margin="0,25,0,0" VerticalAlignment="Center" Text="{Binding PublicationName}" FontFamily="Arial" FontSize="24" ></TextBlock>
+
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

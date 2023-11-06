@@ -34,17 +34,16 @@ namespace PR30
             this.Close();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void TBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
             try
             {
-                //ListUser.ItemsSource = AppData.db.Announcement.Where(u => u.PublicationName == TBoxSearch.Text || u.PublicationName.Contains(TBoxSearch.Text)).ToList();
+                ListUser.ItemsSource = AppData.db.Announcement.Where(u => u.PublicationName == TBoxSearch.Text || u.PublicationName.Contains(TBoxSearch.Text)).ToList();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ошибка!" + ex.ToString());
             }
         }
-
     }
 }
